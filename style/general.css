@@ -29,6 +29,10 @@ strong {
     row-gap: 9.6rem;
 }
 
+.grid:not(:last-child) {
+    margin-bottom: 9.6rem;
+}
+
 .grid--center-verticaly {
     align-items: center;
 }
@@ -42,7 +46,7 @@ strong {
 }
 
 .grid--4-cols {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .margin-right-sm {
@@ -50,7 +54,7 @@ strong {
 }
 
 .margin-bottom-md {
-    margin-bottom: 4.8rem;
+    margin-bottom: 4.8rem !important;
 }
 
 .center-text {
@@ -143,4 +147,24 @@ strong {
 .link:active {
     color: #cf711f;
     border-bottom: 1px solid transparent;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.list-icon {
+    height: 3.0rem;
+    width: 3.0rem;
+    color: #e67e22;
 }
