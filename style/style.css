@@ -9,13 +9,15 @@
     02 -- COLORS
 
     primary: #e67e22
-    tints: #fdf2e9 fae5d3
+    tints: #fdf2e9 fae5d3 #eb984e #452602
     shades: #cf711f
     accents:
 
     main gray: #555555 / #333333 /#6f6f6f
 
     05 -- SHADOWS 
+
+    0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); 
 
     06 -- BORDER RADIUS
 
@@ -468,18 +470,14 @@
 
 /* FEATURES ******************************************************************/
 
-.feature {
-
-}
-
 .feature-icon {
-color: #e67e22;
-background-color: #fdf2e9;
-height: 3.2rem;
-width: 3.2rem;
-margin: 0 0 3.2rem 0;
-padding: 1.6rem 1.6rem 1.6rem 1.6rem;
-border-radius: 50%;
+    color: #e67e22;
+    background-color: #fdf2e9;
+    height: 3.2rem;
+    width: 3.2rem;
+    margin: 0 0 3.2rem 0;
+    padding: 1.6rem 1.6rem 1.6rem 1.6rem;
+    border-radius: 50%;
 }
 
 .feature-title {
@@ -492,6 +490,81 @@ border-radius: 50%;
 .feature-text {
     font-size: 1.8rem;
     line-height: 1.8;
+}
+
+/*****************************************************************************/
+
+/* CTA ***********************************************************************/
+
+.section-cta {
+    padding: 9.6rem 0 9.6rem 0;
+}
+
+.cta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+.cta-text-box {
+    color: #452602;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.cta .heading-secondary {
+    color: inherit;
+    margin: 0 0 3.2rem 0;
+}
+
+.cta-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin: 0 0 4.8rem 0;
+}
+
+.cta-img-box {
+    background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35)), url(../assets/eating.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+
+.cta-form label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 0 0 1.2rem 0;
+}
+
+.cta-form input,
+.cta-form select {
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+    font-family: inherit;
+    border: none;
+    color: inherit;
+    background-color: #fdf2e9;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+    color: #aaaaaa;
+}
+
+.cta *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 
 /*****************************************************************************/
