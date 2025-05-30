@@ -3,6 +3,7 @@ html {
     /*font-size: 10px (recomended)*/
     font-size: 62.5%;
     /*Percentage of user's browser font-size setting!*/
+    overflow-x: hidden;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     font-weight: 400;
     line-height: 1;
     color: #555555;
+    overflow-x: hidden;
 }
 
 strong {
@@ -47,10 +49,6 @@ strong {
 
 .grid--4-cols {
     grid-template-columns: repeat(4, 1fr);
-}
-
-.grid--5-cols {
-    grid-template-columns: repeat(5, 1fr);
 }
 
 .margin-right-sm {
@@ -176,6 +174,7 @@ strong {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+    line-height: 1.2;
 }
 
 .list-item {
