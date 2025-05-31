@@ -25,10 +25,25 @@ allLinks.forEach((link) => {
             });
         } else if (href !== "#" && href.startsWith("#")) {
             const section = document.querySelector(href);
-            section.scrollIntoView({behavior: "smooth"});
+            section.scrollIntoView({ behavior: "smooth" });
         }
 
         if (link.classList.contains("main-nav-link")) header.classList.remove("open-nav");
 
     });
 });
+
+// STICKY NAVIGATION BAR
+
+const sectionHero = document.querySelector(".section-hero");
+const observer = new IntersectionObserver((entries) => {
+    const entry = entries[0];
+    const body = document.querySelector("body");
+    if (entry.isIntersecting === false) {
+        body.classList.add("sticky");
+    } else {
+        body.classList.remove("sticky");
+    }
+}, { root: null, threshold: 0, rootMargin: "-80px" });
+
+observer.observe(sectionHero);
